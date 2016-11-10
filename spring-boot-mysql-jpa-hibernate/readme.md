@@ -25,6 +25,10 @@ database connection.
 
 - Java 7
 - Maven 3
+- mysql-installer-community-5.7.16.0
+	1) Install
+	2) Set username/password: root/root
+	3) Create a new schema(database) with MySQL Workbench: netgloo_blog
 
 #### From terminal
 
@@ -35,3 +39,15 @@ Go on the project's root folder, then type:
 #### From Eclipse (Spring Tool Suite)
 
 Import as *Existing Maven Project* and run it as *Spring Boot App*.
+
+
+
+#### Bug Fixing #####
+* Unable to create a Configuration, because no Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath
+  *Add:
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-validator</artifactId>
+	    <version>5.2.4.Final</version>
+	</dependency>
+

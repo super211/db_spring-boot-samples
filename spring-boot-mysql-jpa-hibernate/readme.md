@@ -59,7 +59,7 @@ upstream    https://github.com/wabish/fork-demo.git (push)
 
 2、建立分支
 git checkout master  //切换回主干
-git checkout -b testing //新建分支并切换过去 = git branch super211//新建分支  + git checkout testing //切换分支
+git checkout -b super211 //新建分支并切换过去 = git branch super211//新建分支  + git checkout super211 //切换分支
 
 3、查看分支
 git branch --list

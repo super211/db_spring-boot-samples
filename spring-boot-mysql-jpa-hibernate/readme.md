@@ -13,6 +13,7 @@ http://blog.netgloo.com/2014/10/06/spring-boot-data-access-with-jpa-hibernate-an
     * `/user/delete?id=[id]`: delete the user with the passed id.
     * `/user/get-by-email?email=[email]`: retrieve the id for the user with the
       passed email address.
+    * http://localhost:8080/select/find : to test retrieve data by using @Query
 
 ### Build and run
 
@@ -40,6 +41,23 @@ Go on the project's root folder, then type:
 
 Import as *Existing Maven Project* and run it as *Spring Boot App*.
 
+
+#### Testing
+* Unit Testing
+	MockMvc in spring-test-***.RELEASE.jar,add the following dependency in pom.xml
+		<dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-starter-test</artifactId>
+	        <scope>test</scope>
+	    </dependency>
+
+* 编写单元测试：
+	REF1: 下面的链接中提供了Spring书写单元测试的一个模板：
+		http://spring.io/guides/tutorials/bookmarks/ ( rest/src/test/java/bookmarks/BookmarkRestControllerTest.java)
+	REF2: 下面链接解决了HAL+JSON的问题 (HAL=Hypertext<Hypermedia> Application Language)
+		http://stackoverflow.com/questions/29261836/spring-data-rest-content-type (for: HAL + JSON)
+* 编写单元测试的两个不同类：springjunit4classrunner + springrunner 
+	SpringRunner(Since 4.3 + JUnit 4.12) is an alias for the SpringJUnit4ClassRunner，SpringJUnit4ClassRunner(since 2.5) is a custom extension of JUnit
 
 #### Git Hub Branch Usage#####
 1、配置上游项目地址。即将你 fork 的项目的地址给配置到自己的项目上。比如我 fork 了一个项目，原项目是 wabish/fork-demo.git，我的项目就是 cobish/fork-demo.git。使用以下命令来配置。

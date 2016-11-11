@@ -16,6 +16,13 @@ http://blog.netgloo.com/2014/10/06/spring-boot-data-access-with-jpa-hibernate-an
     * http://localhost:8080/select/find : to test retrieve data by using @Query
 
 ### Build and run
+* 更改Tomcat端口
+	Run Configurtions : VM Arguments : -Dserver.port=8081
+	mvn spring-boot:run -Drun.jvmArguments='-Dserver.port=8081'
+	或： set server.port as system property using command line option to jvm --server.port=8090 or add application.properties in /src/main/resources/ with server.port = 8081
+	或：random port: server.port=0 (port info can be gotten with @Value("${local.server.port}"))
+	REF: http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-change-the-http-port
+	
 
 #### Configurations
 

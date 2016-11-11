@@ -22,7 +22,7 @@ import netgloo.dao.UserRepository;
 
 
 //REF1: http://spring.io/guides/tutorials/bookmarks/ ( rest/src/test/java/bookmarks/BookmarkRestControllerTest.java)
-//REF2: http://stackoverflow.com/questions/29261836/spring-data-rest-content-type (for: HAL + JSON) 
+//REF2: http://stackoverflow.com/questions/29261836/spring-data-rest-content-type (for: HAL +  
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
